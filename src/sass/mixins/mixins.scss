@@ -1,0 +1,16 @@
+@mixin indent() {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
