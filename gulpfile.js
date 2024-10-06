@@ -38,7 +38,7 @@ export const html = () => {
         collapseWhitespace: true,
       })
     )
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
     .pipe(sync.stream());
 };
 
@@ -53,7 +53,7 @@ export const styles = () => {
     .pipe(postcss([autoprefixer, csso]))
     .pipe(sourcemap.write())
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(sync.stream());
 };
 
@@ -62,7 +62,7 @@ export const normalize = () => {
     .src('src/styles/normalize.css')
     .pipe(postcss([csso]))
     .pipe(rename('normalize.min.css'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(sync.stream());
 };
 
@@ -80,7 +80,7 @@ export const scripts = () => {
     .pipe(terser())
     .pipe(sourcemap.write())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
     .pipe(sync.stream());
 };
 
@@ -96,7 +96,7 @@ export const images = () => {
         imageminSvgo(),
       ])
     )
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('docs/images'));
 };
 
 export const toWebp = () => {
@@ -108,7 +108,7 @@ export const toWebp = () => {
         extname: '.webp',
       })
     )
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('docs/images'));
 };
 
 // SVG
@@ -122,7 +122,7 @@ export const svgSprite = () => {
       })
     )
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('docs/images'));
 };
 
 // Copy
@@ -131,7 +131,7 @@ export const copy = () => {
     .src(['src/fonts/**/*', 'src/*.ico'], {
       base: 'src',
     })
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
     .pipe(
       sync.stream({
         once: true,
@@ -147,7 +147,7 @@ export const server = () => {
     ui: false,
     notify: false,
     server: {
-      baseDir: 'dist',
+      baseDir: 'docs',
     },
   });
 };
