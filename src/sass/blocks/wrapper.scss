@@ -2,6 +2,7 @@
   width: 100%;
   min-width: $mobile-width;
   height: auto;
+  min-height: 100vh;
   @include indent();
 
   @include media-tablet {

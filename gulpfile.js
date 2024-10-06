@@ -178,5 +178,16 @@ export default gulp.series(
 );
 
 // Define complex tasks
-export const build = gulp.series(gulp.parallel(styles, scripts, html));
+export const build = gulp.series(
+  gulp.parallel(
+    html,
+    styles,
+    normalize,
+    scripts,
+    images,
+    toWebp,
+    svgSprite,
+    copy
+  )
+);
 export const start = gulp.series(build, gulp.parallel(server, watch));

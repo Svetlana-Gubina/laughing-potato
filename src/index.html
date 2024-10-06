@@ -5,12 +5,132 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <!-- <link rel="stylesheet" href="styles/index.css"> -->
 </head>
 <body>
-    <h1 class="main-title">Hello from app!</h1>
+    
+        <header class="main-header">
+            <button class="main-header__details mobile">
+                <svg class="main-header__icon" xmlns="http://www.w3.org/2000/svg" width="13.74" height="18"><use xlink:href="images/sprite.svg#icon-details"></use></svg>
+            </button>
+            <h1 class="main-header__title">Setting</h1>
+            <div class="user-nav">
+                <div class="user-nav__input-wrapper">
+                    <input class="user-nav__search" type="search" placeholder="Search for something">
+                </div>
+                
+                <ul class="user-nav__list">
+                    <li><a href="#">
+                        <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-settings"></use></svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-notification"></use></svg>
+                    </a></li>
+                </ul>
+                <picture>
+                    <source type="image/webp" srcset="images/avatar@1x.webp 1x, images/avatar@2x.webp 2x">
+                    <img class="user-avatar" src="images/avatar@1x.png" srcset="images/avatar@2x.png 2x" alt="User avatar">
+                </picture>
+            </div>
+            
+        </header>
+        <main class="page-main">
+            <section class="page-main__section">
+                <h2 class="sr-only">User profile</h2>
+                <header class="page-main__header">
+                    <ul class="page-main__headerList">
+                        <li class="page-main__active"><a href="#">Edit Profile</a></li>
+                        <li><a href="#">Preferences</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </header>
+                <div class="user-profile">
+                    <div class="user-profile__foto-wrapper">
+                        <picture>
+                            <source type="image/webp" srcset="images/user-foto@1x.webp 1x, images/user-foto@2x.webp 2x">
+                            <img class="user-profile__foto" src="images/user-foto@1x.png" srcset="images/user-foto@2x.png 2x" alt="User photo">
+                        </picture>
+                    </div>
+                    <form class="user-profile__form" action="#">
+                            <label>
+                                Your Name
+                                <input type="text" name="yourName" value="Charlene Reed ">
+                            </label>
+
+                            <label>
+                                User Name
+                                <input type="text" name="name" value="Charlene Reed ">
+                            </label>
+
+                            <label>
+                                Email
+                                <input type="email" name="email" value="charlenereed@gmail.com ">
+                            </label>
+                            <label>
+                                Password
+                                <input type="password" name="password" value="123456">
+                            </label>
+                            <label>
+                                Date of Birth
+                                <input type="text" name="birthDate" value="25 January 1990">
+                            </label>
+                            <label>
+                                Present Address
+                                <input type="text" name="presentAdress" value="San Jose, California, USA">
+                            </label>
+                            <label>
+                                Permanent Address
+                                <input type="text" name="adress" value="San Jose, California, USA">
+                            </label>
+                            <label>
+                                City
+                                <input type="text" name="city" value="San Jose">
+                            </label>
+                            <label>
+                                Postal Code
+                                <input type="text" name="code" value="45962">
+                            </label>
+                            
+                            <label>
+                                Country
+                                <input type="text" name="country" value="USA">
+                            </label>
+
+                            <button type="submit">Save</button>
+                        
+                        
+                        
+                    </form>
+                </div>
+                
+            </section>
+        </main>
+        <aside class="sidebar">
+            <div class="logo">
+                <picture>
+                    <source type="image/webp" srcset="images/logo@1x.webp 1x, images/logo@2x.webp 2x">
+                    <img class="logo__image" width="183" height="36" src="images/Logo@1x.png" srcset="images/Logo@2x.png 2x" alt="Logo">
+                </picture>
+            </div>
+            <ul class="sidebar__list">
+                <li><a class="sidebar__link" href="#"><svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-home"></use></svg> Dashboard</a></li>
+                <li><a class="sidebar__link" href="#"><svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-transfer"></use></svg>  Transactions</a></li>
+                <li><a class="sidebar__link" href="#"><svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-user"></use></svg>  Accounts</a></li>
+                <li><a class="sidebar__link" href="#"><svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-economic-investment"></use></svg> Investments</a></li>
+                <li><a class="sidebar__link" href="#"><svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-credit-card"></use></svg>  Credit Cards</a></li>
+                <li><a class="sidebar__link" href="#"><svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-loan"></use></svg>  Loans</a></li>
+                <li><a class="sidebar__link" href="#"><svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-service"></use></svg>  Services</a></li>
+                <li><a class="sidebar__link" href="#"><svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-econometrics"></use></svg>  My Privileges</a></li>
+                <li class="active"><a class="sidebar__link" href="#"><svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25"><use xlink:href="images/sprite.svg#icon-settings-solid"></use></svg> Setting</a></li>
+            </ul>
+        </aside>
+        
+    
     <script src="index.min.js"></script>
 </body>
 </html>
